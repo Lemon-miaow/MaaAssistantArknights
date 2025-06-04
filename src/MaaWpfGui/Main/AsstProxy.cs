@@ -1211,6 +1211,7 @@ namespace MaaWpfGui.Main
                             /* 肉鸽相关 */
                             case "ExitThenAbandon":
                                 Instances.TaskQueueViewModel.AddLog(LocalizationHelper.GetString("ExplorationAbandoned"), UiLogColor.Error);
+                                AchievementTrackerHelper.Instance.AddProgress(AchievementIds.RoguelikeRetreat);
                                 break;
 
                             // case "StartAction":
@@ -1272,6 +1273,7 @@ namespace MaaWpfGui.Main
 
                             case "GamePass":
                                 Instances.TaskQueueViewModel.AddLog(LocalizationHelper.GetString("RoguelikeGamePass"), UiLogColor.RareOperator);
+                                AchievementTrackerHelper.Instance.AddProgressToGroup(AchievementIds.RoguelikeGamePassGroup);
                                 break;
 
                             case "BattleStartAll":
